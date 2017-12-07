@@ -1,0 +1,1233 @@
+﻿<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en-US"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" lang="en-US"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9" lang="en-US"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js" lang="en-US">
+<!--<![endif]-->
+<head>
+    <meta charset="UTF-8" />
+    <!--[if IE]>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <![endif]-->
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, initial-scale=1.0, user-scalable=no">
+    <title>@RenderSection("Title", false)</title>
+    <link rel="apple-touch-icon" sizes="144x144" href="~/wp-content/themes/coffee/images/apple-touch-icon.png">
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="~/wp-content/themes/coffee/images/apple-touch-icon-precomposed.png">
+    <!-- Feeds and Pingback -->
+    <link rel="profile" href="http://gmpg.org/xfn/11">
+    <link rel="alternate" type="application/rss+xml" title="CmsCoffee RSS2 Feed" href="http://nesspresso.lotusapps.net/feed" />
+    <link rel="pingback" href="http://nesspresso.lotusapps.net/xmlrpc.php">
+    <link rel="alternate" type="application/rss+xml" title="CmsCoffee &raquo; Feed" href="http://nesspresso.lotusapps.net/feed" />
+    <link rel="alternate" type="application/rss+xml" title="CmsCoffee &raquo; Comments Feed" href="http://nesspresso.lotusapps.net/comments/feed" />
+
+    <link rel="alternate" type="application/rss+xml" title="CmsCoffee &raquo; About Us Comments Feed" href="http://nesspresso.lotusapps.net/about-us/feed">
+    <link rel="stylesheet" id="jquery-ui-custom-css" href="~/wp-content/plugins/zm-ajax-login-register/assets/jquery-ui.css" type="text/css" media="all">
+    <link rel="stylesheet" id="ajax-login-register-style-css" href="~/css/style_002.css" type="text/css" media="all">
+    <link rel="stylesheet" id="ajax-login-register-login-style-css" href="~/wp-content/plugins/zm-ajax-login-register/assets/login.css" type="text/css" media="all">
+    <link rel="stylesheet" id="ajax-login-register-register-style-css" href="~/wp-content/plugins/zm-ajax-login-register/assets/register.css" type="text/css" media="all">
+    <link rel="stylesheet" id="rs-plugin-settings-css" href="~/wp-content/themes/coffee/framework/plugins/revslider/rs-plugin/css/settings.css" type="text/css" media="all">
+    <style type="text/css">
+        .tp-caption.medium_grey {
+            position: absolute;
+            color: #fff;
+            text-shadow: 0px 2px 5px rgba(0, 0, 0, 0.5);
+            font-weight: 700;
+            font-size: 20px;
+            line-height: 20px;
+            font-family: Arial;
+            padding: 2px 4px;
+            margin: 0px;
+            border-width: 0px;
+            border-style: none;
+            background-color: #888;
+            white-space: nowrap;
+        }
+
+        .tp-caption.small_text {
+            position: absolute;
+            color: #fff;
+            text-shadow: 0px 2px 5px rgba(0, 0, 0, 0.5);
+            font-weight: 700;
+            font-size: 14px;
+            line-height: 20px;
+            font-family: Arial;
+            margin: 0px;
+            border-width: 0px;
+            border-style: none;
+            white-space: nowrap;
+        }
+
+        .tp-caption.medium_text {
+            position: absolute;
+            color: #fff;
+            text-shadow: 0px 2px 5px rgba(0, 0, 0, 0.5);
+            font-weight: 700;
+            font-size: 20px;
+            line-height: 20px;
+            font-family: Arial;
+            margin: 0px;
+            border-width: 0px;
+            border-style: none;
+            white-space: nowrap;
+        }
+
+        .tp-caption.large_text {
+            position: absolute;
+            color: #fff;
+            text-shadow: 0px 2px 5px rgba(0, 0, 0, 0.5);
+            font-weight: 700;
+            font-size: 40px;
+            line-height: 40px;
+            font-family: Arial;
+            margin: 0px;
+            border-width: 0px;
+            border-style: none;
+            white-space: nowrap;
+        }
+
+        .tp-caption.very_large_text {
+            position: absolute;
+            color: #fff;
+            text-shadow: 0px 2px 5px rgba(0, 0, 0, 0.5);
+            font-weight: 700;
+            font-size: 60px;
+            line-height: 60px;
+            font-family: Arial;
+            margin: 0px;
+            border-width: 0px;
+            border-style: none;
+            white-space: nowrap;
+            letter-spacing: -2px;
+        }
+
+        .tp-caption.very_big_white {
+            position: absolute;
+            color: #fff;
+            text-shadow: none;
+            font-weight: 800;
+            font-size: 60px;
+            line-height: 60px;
+            font-family: Arial;
+            margin: 0px;
+            border-width: 0px;
+            border-style: none;
+            white-space: nowrap;
+            padding: 0px 4px;
+            padding-top: 1px;
+            background-color: #000;
+        }
+
+        .tp-caption.very_big_black {
+            position: absolute;
+            color: #000;
+            text-shadow: none;
+            font-weight: 700;
+            font-size: 60px;
+            line-height: 60px;
+            font-family: Arial;
+            margin: 0px;
+            border-width: 0px;
+            border-style: none;
+            white-space: nowrap;
+            padding: 0px 4px;
+            padding-top: 1px;
+            background-color: #fff;
+        }
+
+        .tp-caption.modern_medium_fat {
+            position: absolute;
+            color: #000;
+            text-shadow: none;
+            font-weight: 800;
+            font-size: 24px;
+            line-height: 20px;
+            font-family: "Open Sans", sans-serif;
+            margin: 0px;
+            border-width: 0px;
+            border-style: none;
+            white-space: nowrap;
+        }
+
+        .tp-caption.modern_medium_fat_white {
+            position: absolute;
+            color: #fff;
+            text-shadow: none;
+            font-weight: 800;
+            font-size: 24px;
+            line-height: 20px;
+            font-family: "Open Sans", sans-serif;
+            margin: 0px;
+            border-width: 0px;
+            border-style: none;
+            white-space: nowrap;
+        }
+
+        .tp-caption.modern_medium_light {
+            position: absolute;
+            color: #000;
+            text-shadow: none;
+            font-weight: 300;
+            font-size: 24px;
+            line-height: 20px;
+            font-family: "Open Sans", sans-serif;
+            margin: 0px;
+            border-width: 0px;
+            border-style: none;
+            white-space: nowrap;
+        }
+
+        .tp-caption.modern_big_bluebg {
+            position: absolute;
+            color: #fff;
+            text-shadow: none;
+            font-weight: 800;
+            font-size: 30px;
+            line-height: 36px;
+            font-family: "Open Sans", sans-serif;
+            padding: 3px 10px;
+            margin: 0px;
+            border-width: 0px;
+            border-style: none;
+            background-color: #4e5b6c;
+            letter-spacing: 0;
+        }
+
+        .tp-caption.modern_big_redbg {
+            position: absolute;
+            color: #fff;
+            text-shadow: none;
+            font-weight: 300;
+            font-size: 30px;
+            line-height: 36px;
+            font-family: "Open Sans", sans-serif;
+            padding: 3px 10px;
+            padding-top: 1px;
+            margin: 0px;
+            border-width: 0px;
+            border-style: none;
+            background-color: #de543e;
+            letter-spacing: 0;
+        }
+
+        .tp-caption.modern_small_text_dark {
+            position: absolute;
+            color: #555;
+            text-shadow: none;
+            font-size: 14px;
+            line-height: 22px;
+            font-family: Arial;
+            margin: 0px;
+            border-width: 0px;
+            border-style: none;
+            white-space: nowrap;
+        }
+
+        .tp-caption.boxshadow {
+            -moz-box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
+            -webkit-box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
+            box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
+        }
+
+        .tp-caption.black {
+            font-size: 40px !important;
+            line-height: 32px;
+            font-weight: 600;
+            font-family: "proxima_nova_cn_ltsemibold";
+            color: #ffffff;
+            text-decoration: none;
+            background-color: transparent;
+            text-shadow: none;
+            border-width: 0px;
+            border-color: rgb(0, 0, 0);
+            border-style: none;
+        }
+
+        .tp-caption.noshadow {
+            font-size: 17px;
+            color: rgb(255, 255, 255);
+            text-decoration: none;
+            background-color: transparent;
+            text-shadow: none;
+            border-width: 0px;
+            border-color: rgb(255, 255, 255);
+            border-style: none;
+        }
+
+        .tp-caption.thinheadline_dark {
+            position: absolute;
+            color: rgba(0,0,0,0.85);
+            text-shadow: none;
+            font-weight: 300;
+            font-size: 30px;
+            line-height: 30px;
+            font-family: "Open Sans";
+            background-color: transparent;
+        }
+
+        .tp-caption.thintext_dark {
+            position: absolute;
+            color: rgba(0,0,0,0.85);
+            text-shadow: none;
+            font-weight: 300;
+            font-size: 16px;
+            line-height: 26px;
+            font-family: "Open Sans";
+            background-color: transparent;
+        }
+
+        .tp-caption.largeblackbg {
+            position: absolute;
+            color: #fff;
+            text-shadow: none;
+            font-weight: 300;
+            font-size: 50px;
+            line-height: 70px;
+            font-family: "Open Sans";
+            background-color: #000;
+            padding: 0px 20px;
+            -webkit-border-radius: 0px;
+            -moz-border-radius: 0px;
+            border-radius: 0px;
+        }
+
+        .tp-caption.largepinkbg {
+            position: absolute;
+            color: #fff;
+            text-shadow: none;
+            font-weight: 300;
+            font-size: 50px;
+            line-height: 70px;
+            font-family: "Open Sans";
+            background-color: #db4360;
+            padding: 0px 20px;
+            -webkit-border-radius: 0px;
+            -moz-border-radius: 0px;
+            border-radius: 0px;
+        }
+
+        .tp-caption.largewhitebg {
+            position: absolute;
+            color: #000;
+            text-shadow: none;
+            font-weight: 300;
+            font-size: 50px;
+            line-height: 70px;
+            font-family: "Open Sans";
+            background-color: #fff;
+            padding: 0px 20px;
+            -webkit-border-radius: 0px;
+            -moz-border-radius: 0px;
+            border-radius: 0px;
+        }
+
+        .tp-caption.largegreenbg {
+            position: absolute;
+            color: #fff;
+            text-shadow: none;
+            font-weight: 300;
+            font-size: 50px;
+            line-height: 70px;
+            font-family: "Open Sans";
+            background-color: #67ae73;
+            padding: 0px 20px;
+            -webkit-border-radius: 0px;
+            -moz-border-radius: 0px;
+            border-radius: 0px;
+        }
+
+        .tp-caption.excerpt {
+            font-size: 36px;
+            line-height: 36px;
+            font-weight: 700;
+            font-family: Arial;
+            color: #ffffff;
+            text-decoration: none;
+            background-color: rgba(0, 0, 0, 1);
+            text-shadow: none;
+            margin: 0px;
+            letter-spacing: -1.5px;
+            padding: 1px 4px 0px 4px;
+            width: 150px;
+            white-space: normal !important;
+            height: auto;
+            border-width: 0px;
+            border-color: rgb(255, 255, 255);
+            border-style: none;
+        }
+
+        .tp-caption.large_bold_grey {
+            font-size: 60px;
+            line-height: 60px;
+            font-weight: 800;
+            font-family: "Open Sans";
+            color: rgb(102, 102, 102);
+            text-decoration: none;
+            background-color: transparent;
+            text-shadow: none;
+            margin: 0px;
+            padding: 1px 4px 0px;
+            border-width: 0px;
+            border-color: rgb(255, 214, 88);
+            border-style: none;
+        }
+
+        .tp-caption.medium_thin_grey {
+            font-size: 34px;
+            line-height: 30px;
+            font-weight: 300;
+            font-family: "Open Sans";
+            color: rgb(102, 102, 102);
+            text-decoration: none;
+            background-color: transparent;
+            padding: 1px 4px 0px;
+            text-shadow: none;
+            margin: 0px;
+            border-width: 0px;
+            border-color: rgb(255, 214, 88);
+            border-style: none;
+        }
+
+        .tp-caption.small_thin_grey {
+            font-size: 18px;
+            line-height: 26px;
+            font-weight: 300;
+            font-family: "Open Sans";
+            color: rgb(117, 117, 117);
+            text-decoration: none;
+            background-color: transparent;
+            padding: 1px 4px 0px;
+            text-shadow: none;
+            margin: 0px;
+            border-width: 0px;
+            border-color: rgb(255, 214, 88);
+            border-style: none;
+        }
+
+        .tp-caption.lightgrey_divider {
+            text-decoration: none;
+            background-color: rgba(235, 235, 235, 1);
+            width: 370px;
+            height: 3px;
+            background-position: initial initial;
+            background-repeat: initial initial;
+            border-width: 0px;
+            border-color: rgb(34, 34, 34);
+            border-style: none;
+        }
+
+        .tp-caption.large_bold_darkblue {
+            font-size: 58px;
+            line-height: 60px;
+            font-weight: 800;
+            font-family: "Open Sans";
+            color: rgb(52, 73, 94);
+            text-decoration: none;
+            background-color: transparent;
+            border-width: 0px;
+            border-color: rgb(255, 214, 88);
+            border-style: none;
+        }
+
+        .tp-caption.medium_bg_darkblue {
+            font-size: 20px;
+            line-height: 20px;
+            font-weight: 800;
+            font-family: "Open Sans";
+            color: rgb(255, 255, 255);
+            text-decoration: none;
+            background-color: rgb(52, 73, 94);
+            padding: 10px;
+            border-width: 0px;
+            border-color: rgb(255, 214, 88);
+            border-style: none;
+        }
+
+        .tp-caption.medium_bold_red {
+            font-size: 24px;
+            line-height: 30px;
+            font-weight: 800;
+            font-family: "Open Sans";
+            color: rgb(227, 58, 12);
+            text-decoration: none;
+            background-color: transparent;
+            padding: 0px;
+            border-width: 0px;
+            border-color: rgb(255, 214, 88);
+            border-style: none;
+        }
+
+        .tp-caption.medium_light_red {
+            font-size: 21px;
+            line-height: 26px;
+            font-weight: 300;
+            font-family: "Open Sans";
+            color: rgb(227, 58, 12);
+            text-decoration: none;
+            background-color: transparent;
+            padding: 0px;
+            border-width: 0px;
+            border-color: rgb(255, 214, 88);
+            border-style: none;
+        }
+
+        .tp-caption.medium_bg_red {
+            font-size: 20px;
+            line-height: 20px;
+            font-weight: 800;
+            font-family: "Open Sans";
+            color: rgb(255, 255, 255);
+            text-decoration: none;
+            background-color: rgb(227, 58, 12);
+            padding: 10px;
+            border-width: 0px;
+            border-color: rgb(255, 214, 88);
+            border-style: none;
+        }
+
+        .tp-caption.medium_bold_orange {
+            font-size: 24px;
+            line-height: 30px;
+            font-weight: 800;
+            font-family: "Open Sans";
+            color: rgb(243, 156, 18);
+            text-decoration: none;
+            background-color: transparent;
+            border-width: 0px;
+            border-color: rgb(255, 214, 88);
+            border-style: none;
+        }
+
+        .tp-caption.medium_bg_orange {
+            font-size: 20px;
+            line-height: 20px;
+            font-weight: 800;
+            font-family: "Open Sans";
+            color: rgb(255, 255, 255);
+            text-decoration: none;
+            background-color: rgb(243, 156, 18);
+            padding: 10px;
+            border-width: 0px;
+            border-color: rgb(255, 214, 88);
+            border-style: none;
+        }
+
+        .tp-caption.grassfloor {
+            text-decoration: none;
+            background-color: rgba(160, 179, 151, 1);
+            width: 4000px;
+            height: 150px;
+            border-width: 0px;
+            border-color: rgb(34, 34, 34);
+            border-style: none;
+        }
+
+        .tp-caption.large_bold_white {
+            font-size: 40px;
+            line-height: 60px;
+            font-weight: 800;
+            font-family: "Open Sans";
+            color: rgb(255, 255, 255);
+            text-decoration: none;
+            background-color: transparent;
+            border-width: 0px;
+            border-color: rgb(255, 214, 88);
+            border-style: none;
+        }
+
+        .tp-caption.medium_light_white {
+            font-size: 30px;
+            line-height: 36px;
+            font-weight: 300;
+            font-family: "Open Sans";
+            color: rgb(255, 255, 255);
+            text-decoration: none;
+            background-color: transparent;
+            padding: 0px;
+            border-width: 0px;
+            border-color: rgb(255, 214, 88);
+            border-style: none;
+        }
+
+        .tp-caption.mediumlarge_light_white {
+            font-size: 34px;
+            line-height: 40px;
+            font-weight: 300;
+            font-family: "Open Sans";
+            color: rgb(255, 255, 255);
+            text-decoration: none;
+            background-color: transparent;
+            padding: 0px;
+            border-width: 0px;
+            border-color: rgb(255, 214, 88);
+            border-style: none;
+        }
+
+        .tp-caption.mediumlarge_light_white_center {
+            font-size: 34px;
+            line-height: 40px;
+            font-weight: 300;
+            font-family: "Open Sans";
+            color: #ffffff;
+            text-decoration: none;
+            background-color: transparent;
+            padding: 0px 0px 0px 0px;
+            text-align: center;
+            border-width: 0px;
+            border-color: rgb(255, 214, 88);
+            border-style: none;
+        }
+
+        .tp-caption.medium_bg_asbestos {
+            font-size: 20px;
+            line-height: 20px;
+            font-weight: 800;
+            font-family: "Open Sans";
+            color: rgb(255, 255, 255);
+            text-decoration: none;
+            background-color: rgb(127, 140, 141);
+            padding: 10px;
+            border-width: 0px;
+            border-color: rgb(255, 214, 88);
+            border-style: none;
+        }
+
+        .tp-caption.medium_light_black {
+            font-size: 30px;
+            line-height: 36px;
+            font-weight: 300;
+            font-family: "Open Sans";
+            color: rgb(0, 0, 0);
+            text-decoration: none;
+            background-color: transparent;
+            padding: 0px;
+            border-width: 0px;
+            border-color: rgb(255, 214, 88);
+            border-style: none;
+        }
+
+        .tp-caption.large_bold_black {
+            font-size: 58px;
+            line-height: 60px;
+            font-weight: 800;
+            font-family: "Open Sans";
+            color: rgb(0, 0, 0);
+            text-decoration: none;
+            background-color: transparent;
+            border-width: 0px;
+            border-color: rgb(255, 214, 88);
+            border-style: none;
+        }
+
+        .tp-caption.mediumlarge_light_darkblue {
+            font-size: 34px;
+            line-height: 40px;
+            font-weight: 300;
+            font-family: "Open Sans";
+            color: rgb(52, 73, 94);
+            text-decoration: none;
+            background-color: transparent;
+            padding: 0px;
+            border-width: 0px;
+            border-color: rgb(255, 214, 88);
+            border-style: none;
+        }
+
+        .tp-caption.small_light_white {
+            font-size: 17px;
+            line-height: 28px;
+            font-weight: 300;
+            font-family: "Open Sans";
+            color: rgb(255, 255, 255);
+            text-decoration: none;
+            background-color: transparent;
+            padding: 0px;
+            border-width: 0px;
+            border-color: rgb(255, 214, 88);
+            border-style: none;
+        }
+
+        .tp-caption.roundedimage {
+            border-width: 0px;
+            border-color: rgb(34, 34, 34);
+            border-style: none;
+        }
+
+        .tp-caption.large_bg_black {
+            font-size: 40px;
+            line-height: 40px;
+            font-weight: 800;
+            font-family: "Open Sans";
+            color: rgb(255, 255, 255);
+            text-decoration: none;
+            background-color: rgb(0, 0, 0);
+            padding: 10px 20px 15px;
+            border-width: 0px;
+            border-color: rgb(255, 214, 88);
+            border-style: none;
+        }
+
+        .tp-caption.mediumwhitebg {
+            font-size: 30px;
+            line-height: 30px;
+            font-weight: 300;
+            font-family: "Open Sans";
+            color: rgb(0, 0, 0);
+            text-decoration: none;
+            background-color: rgb(255, 255, 255);
+            padding: 5px 15px 10px;
+            text-shadow: none;
+            border-width: 0px;
+            border-color: rgb(0, 0, 0);
+            border-style: none;
+        }
+
+
+        .tp-caption a {
+            color: #FFFFFF;
+            text-shadow: none;
+            -webkit-transition: all 0.2s ease-out;
+            -moz-transition: all 0.2s ease-out;
+            -o-transition: all 0.2s ease-out;
+            -ms-transition: all 0.2s ease-out;
+        }
+
+            .tp-caption a:hover {
+                color: #ffa902;
+            }
+    </style>
+    <link rel="stylesheet" id="ubermenu-css" href="~/wp-content/plugins/ubermenu/pro/assets/css/ubermenu.css" type="text/css" media="all">
+    <link rel="stylesheet" id="ubermenu-font-awesome-css" href="~/css/font-awesome_002.css" type="text/css" media="all">
+    <link rel="stylesheet" id="wprmm-style-css" href="~/wp-content/plugins/easy-restaurant-menu-manage/css/style.css" type="text/css" media="all">
+    <link rel="stylesheet" id="wprmm-tooltip-style-css" href="~/wp-content/plugins/easy-restaurant-menu-manage/css/wprmm-tooltip.css" type="text/css" media="all">
+    <link rel="stylesheet" id="wprmm-custom-db-style-css" href="CmsCoffee_files/a.css" type="text/css" media="all">
+    <link rel="stylesheet" id="theme-style-css" href="~/wp-content/themes/coffee/css/screen.css" type="text/css" media="all">
+    <link rel="stylesheet" id="theme-icons-awesome-css" href="~/wp-content/themes/coffee/icons/awesome/css/font-awesome.css" type="text/css" media="all">
+    <link rel="stylesheet" id="theme-responsive-css" href="~/wp-content/themes/coffee/css/responsive.css" type="text/css" media="all">
+    <link rel="stylesheet" id="theme-skin-css" href="~/wp-content/themes/coffee/cache/skin.css" type="text/css" media="all">
+    <script type="text/javascript" src="~/js/jquery_012.js"></script>
+    <script type="text/javascript" src="~/js/jquery-migrate.js"></script>
+    <script type="text/javascript" src="~/js/jquery_010.js"></script>
+    <script type="text/javascript" src="~/js/jquery_005.js"></script>
+    <script type="text/javascript" src="~/js/jquery_004.js"></script>
+    <script type="text/javascript" src="~/js/jquery_007.js"></script>
+    <script type="text/javascript" src="~/js/jquery_011.js"></script>
+    <script type="text/javascript" src="~/js/jquery_008.js"></script>
+    <script type="text/javascript" src="~/js/jquery_006.js"></script>
+    <script type="text/javascript" src="~/js/jquery_003.js"></script>
+    <script type='text/javascript'>
+        /* <![CDATA[ */
+        var _ajax_login_settings = { "ajaxurl": "http:\/\/nesspresso.lotusapps.net\/wp-admin\/admin-ajax.php", "login_handle": "", "register_handle": "", "redirect": "http:\/\/nesspresso.lotusapps.net\/", "dialog_width": "265", "match_error": "Passwords do not match.", "is_user_logged_in": "0", "wp_logout_url": "http:\/\/nesspresso.lotusapps.net\/wp-login.php?action=logout&redirect_to=http%3A%2F%2Fnesspresso.lotusapps.net&_wpnonce=edfb86dbd8", "logout_text": "Logout", "close_text": "Close" };
+/* ]]> */
+    </script>
+    <script type="text/javascript" src="~/js/scripts.js"></script>
+    <script type="text/javascript" src="~/js/login.js"></script>
+    <script type="text/javascript" src="~/js/register.js"></script>
+    <script type="text/javascript" src="~/js/jquery.js"></script>
+    <script type="text/javascript" src="~/js/jquery_009.js"></script>
+    <script type="text/javascript" src="~/js/jquery_002.js"></script>
+    <script type="text/javascript" src="~/js/custom.js"></script>
+    <link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://nesspresso.lotusapps.net/xmlrpc.php?rsd">
+    <link rel="wlwmanifest" type="application/wlwmanifest+xml" href="http://nesspresso.lotusapps.net/wp-includes/wlwmanifest.xml">
+    <meta name="generator" content="WordPress 4.0.20">
+    <link rel="canonical" href="~/about-us">
+    <link rel="shortlink" href="http://nesspresso.lotusapps.net/?p=220">
+    <style id="ubermenu-custom-generated-css">
+        /** UberMenu Custom Menu Styles (Customizer) **/
+        /* main */
+        .ubermenu-main {
+            max-width: 1000px;
+            border: 1px solid #transparent;
+        }
+
+            .ubermenu-main .ubermenu-row {
+                max-width: 200px;
+                margin-left: auto;
+                margin-right: auto;
+            }
+
+            .ubermenu-main .ubermenu-item-level-0 > .ubermenu-target {
+                font-size: 16px;
+                text-transform: uppercase;
+                color: #f7f7f7;
+            }
+
+            .ubermenu-main .ubermenu-nav .ubermenu-item.ubermenu-item-level-0 > .ubermenu-target {
+                font-weight: normal;
+            }
+
+            .ubermenu.ubermenu-main .ubermenu-item-level-0:hover > .ubermenu-target, .ubermenu-main .ubermenu-item-level-0.ubermenu-active > .ubermenu-target {
+                color: #dd9933;
+            }
+
+            .ubermenu-main .ubermenu-item-level-0.ubermenu-current-menu-item > .ubermenu-target, .ubermenu-main .ubermenu-item-level-0.ubermenu-current-menu-parent > .ubermenu-target, .ubermenu-main .ubermenu-item-level-0.ubermenu-current-menu-ancestor > .ubermenu-target {
+                color: #dd9933;
+            }
+
+            .ubermenu-main .ubermenu-item.ubermenu-item-level-0 > .ubermenu-highlight {
+                color: #dd9933;
+            }
+
+            .ubermenu-main .ubermenu-submenu.ubermenu-submenu-drop {
+                background-color: #ebebeb;
+            }
+
+            .ubermenu-main .ubermenu-item-normal > .ubermenu-target, .ubermenu-main .ubermenu-submenu .ubermenu-target, .ubermenu-main .ubermenu-submenu .ubermenu-nonlink, .ubermenu-main .ubermenu-submenu .ubermenu-widget, .ubermenu-main .ubermenu-submenu .ubermenu-custom-content-padded, .ubermenu-main .ubermenu-submenu .ubermenu-retractor, .ubermenu-main .ubermenu-submenu .ubermenu-colgroup .ubermenu-column, .ubermenu-main .ubermenu-submenu.ubermenu-submenu-type-stack > .ubermenu-item-normal > .ubermenu-target, .ubermenu-main .ubermenu-submenu.ubermenu-submenu-padded {
+                padding: 2px 20px;
+            }
+
+        .ubermenu .ubermenu-grid-row {
+            padding-right: 2px 20px;
+        }
+
+            .ubermenu .ubermenu-grid-row .ubermenu-target {
+                padding-right: 0;
+            }
+
+        .ubermenu-main .ubermenu-submenu .ubermenu-item-header > .ubermenu-target, .ubermenu-main .ubermenu-tab > .ubermenu-target {
+            font-size: 16px;
+        }
+
+        .ubermenu-main .ubermenu-item-normal > .ubermenu-target {
+            color: #ffffff;
+        }
+
+        .ubermenu.ubermenu-main .ubermenu-item-normal > .ubermenu-target:hover {
+            color: #dd9933;
+        }
+
+        .ubermenu-main .ubermenu-item-normal.ubermenu-current-menu-item > .ubermenu-target {
+            color: #dd9933;
+        }
+
+        .ubermenu-main .ubermenu-submenu-type-flyout > .ubermenu-item-normal > .ubermenu-target {
+            padding-top: 5px 20px;
+            padding-bottom: 5px 20px;
+        }
+
+        .ubermenu-main .ubermenu-target > .ubermenu-target-description {
+            font-size: 14px;
+            text-transform: uppercase;
+        }
+
+        .ubermenu-responsive-toggle.ubermenu-responsive-toggle-main {
+            color: #ffffff;
+        }
+
+            .ubermenu-responsive-toggle.ubermenu-responsive-toggle-main:hover {
+                color: #dd9933;
+            }
+
+
+        /** UberMenu Custom Menu Item Styles (Menu Item Settings) **/
+        /* 43 */ .ubermenu .ubermenu-item.ubermenu-item-43 > .ubermenu-target {
+            background: transparent;
+            color: #747474;
+        }
+
+            .ubermenu .ubermenu-item.ubermenu-item-43.ubermenu-active > .ubermenu-target, .ubermenu .ubermenu-item.ubermenu-item-43 > .ubermenu-target:hover, .ubermenu .ubermenu-submenu .ubermenu-item.ubermenu-item-43.ubermenu-active > .ubermenu-target, .ubermenu .ubermenu-submenu .ubermenu-item.ubermenu-item-43 > .ubermenu-target:hover {
+                background: transparent;
+            }
+
+        .ubermenu .ubermenu-item.ubermenu-item-43.ubermenu-active > .ubermenu-target, .ubermenu .ubermenu-submenu .ubermenu-item.ubermenu-item-43.ubermenu-active > .ubermenu-target {
+            color: #e27900;
+        }
+        /* 27 */ .ubermenu .ubermenu-item-27 > .ubermenu-target, .ubermenu .ubermenu-item-27 > .ubermenu-content-block, .ubermenu .ubermenu-item-27.ubermenu-custom-content-padded {
+            padding: 5px 20px;
+        }
+        /* 44 */ .ubermenu .ubermenu-item-44 > .ubermenu-target, .ubermenu .ubermenu-item-44 > .ubermenu-content-block, .ubermenu .ubermenu-item-44.ubermenu-custom-content-padded {
+            padding: 5px 20px;
+        }
+        /* 243 */ .ubermenu .ubermenu-item-243 > .ubermenu-target, .ubermenu .ubermenu-item-243 > .ubermenu-content-block, .ubermenu .ubermenu-item-243.ubermenu-custom-content-padded {
+            padding: 5px 20px;
+        }
+        /* 241 */ .ubermenu .ubermenu-item.ubermenu-item-241.ubermenu-active > .ubermenu-target, .ubermenu .ubermenu-submenu .ubermenu-item.ubermenu-item-241.ubermenu-active > .ubermenu-target {
+            color: #e27900;
+        }
+
+        .ubermenu .ubermenu-submenu.ubermenu-submenu-id-241 .ubermenu-target, .ubermenu .ubermenu-submenu.ubermenu-submenu-id-241 .ubermenu-target > .ubermenu-target-description {
+            color: #000000;
+        }
+        /* 242 */ .ubermenu .ubermenu-item-242 > .ubermenu-target, .ubermenu .ubermenu-item-242 > .ubermenu-content-block, .ubermenu .ubermenu-item-242.ubermenu-custom-content-padded {
+            padding: 5px 20px;
+        }
+        /* 252 */ .ubermenu .ubermenu-submenu.ubermenu-submenu-id-252 {
+            width: 240px;
+            min-width: 240px;
+        }
+
+        /* Status: Loaded from Transient */
+    </style>    <!-- Start: Ajax Login Register Facebook meta tags -->
+    <meta property="og:title" content="About Us | ">
+    <!-- End: Ajax Login Register Facebook meta tags -->
+    <!-- Start: Ajax Login Register Facebook script -->
+    <script type="text/javascript">
+        window.fbAsyncInit = function () {
+            FB.init({
+                appId: , // App ID
+                cookie: true,  // enable cookies to allow the server to access the session
+                xfbml: true,  // parse XFBML
+                version: 'v2.0' // use version 2.0
+            });
+        };
+
+        // Load the SDK asynchronously
+        // This is updated as the old version went to all.js
+        (function (d, s, id) {
+            var js, fjs = d.getElementsByTagName(s)[0];
+            if (d.getElementById(id)) return;
+            js = d.createElement(s); js.id = id;
+            js.src = "//connect.facebook.net/en_US/sdk.js";
+            fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));
+    </script>
+    <!-- End: Ajax Login Register Facebook script -->
+
+    <script type="text/javascript">
+        var image_url = '~/wp-content/themes/coffee/images';
+        var theme_url = '~/wp-content/themes/coffee';
+        var fancybox_options = {
+            skin: 'theme',
+            title_type: 'float',
+            width: 800,
+            height: 600,
+            autoSize: true,
+            autoWidth: false,
+            autoHeight: false,
+            fitToView: true,
+            aspectRatio: false,
+            arrows: true,
+            closeBtn: true,
+            closeClick: false,
+            nextClick: false,
+            autoPlay: false,
+            playSpeed: 3000,
+            preload: 3,
+            loop: true,
+            thumbnail: true,
+            thumbnail_width: 50,
+            thumbnail_height: 50,
+            thumbnail_position: 'bottom'
+        };
+        var pie_progress_bar_color = "#3cabce",
+            pie_progress_track_color = "#e5e5e5";
+        var nav2select_indentString = "–";
+        var nav2select_defaultText = "Navigate to...";
+    </script>
+    <style type="text/css">
+        .no-gradient #feature, .has-gradient #feature {
+            background-image: url('CmsCoffee_files/wp-content/uploads/2014/08/banner.png');
+            background-repeat:;
+            background-position:;
+            background-attachment:;
+            -webkit-background-size:;
+            -moz-background-size:;
+            -o-background-size:;
+            background-size:;
+        }
+    </style>
+
+    <!--[if IE 6 ]>
+        <link href="~/wp-content/themes/coffee/css/ie6.css" media="screen" rel="stylesheet" type="text/css">
+        <script type="text/javascript" src="~/wp-content/themes/coffee/js/dd_belatedpng-min.js"></script>
+        <script type="text/javascript" src="~/wp-content/themes/coffee/js/ie6.js"></script>
+    <![endif]-->
+    <!--[if IE 7 ]>
+    <link href="~/wp-content/themes/coffee/css/ie7.css" media="screen" rel="stylesheet" type="text/css">
+    <![endif]-->
+    <!--[if IE 8 ]>
+    <link href="~/wp-content/themes/coffee/css/ie8.css" media="screen" rel="stylesheet" type="text/css">
+    <![endif]-->
+    <!--[if IE]>
+        <script type="text/javascript" src="~/wp-content/themes/coffee/js/html5shiv.js"></script>
+    <![endif]-->
+    <!-- Make IE8 and below responsive by adding CSS3 MediaQuery support -->
+    <!--[if lt IE 9]>
+      <script type='text/javascript' src='~/wp-content/themes/coffee/js/css3-mediaqueries.js'></script>
+    <![endif]-->
+    <link rel="stylesheet" href="~/css/stylesheet.css" type="text/css" media="screen">
+    <link rel="stylesheet" href="~/css/stylesheet_002.css" type="text/css" media="screen">
+    <link href="~/css/css_003.css" rel="stylesheet" type="text/css">
+    <link href="~/css/css_002.css" rel="stylesheet" type="text/css">
+    <link href="~/css/css.css" rel="stylesheet" type="text/css">
+    <link href="~/css/animate.css" media="screen" rel="stylesheet" type="text/css">
+    <style type="text/css">
+        .fancybox-margin {
+            margin-right: 17px;
+        }
+    </style>
+    <script type="text/javascript" charset="UTF-8" src="~/js/common.js"></script>
+    <script type="text/javascript" charset="UTF-8" src="~/js/util.js"></script>
+    <script type="text/javascript" charset="UTF-8" src="~/js/stats.js"></script>
+</head>
+<body class="@RenderSection("class_body", false)">
+    <div class="body-warp">
+        <header id="header">
+            <div class="inner">
+                <div id="login">
+                    <a href="~/contact-us">
+                        Find / Contacts
+                    </a>
+                </div>
+                <div id="logo">
+                    <a href="~/">
+                        <img class="site-logo ie_png" src="~/images/logo.png" alt="CmsCoffee">
+                    </a>
+                </div>
+
+                <div id="login_register">
+                    <div class="inner-content">
+                        <section id="nav_menu-2" class="widget widget_nav_menu">
+                            <h3 class="widgettitle">Login &amp; Register</h3><div class="menu-login-register-container">
+                                <ul id="menu-login-register" class="menu">
+                                    <li id="menu-item-92" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-92"><a href="Register_CmsCoffee.htm">Register</a></li>
+                                    <li id="menu-item-93" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-93"><a href="Login Page_CmsCoffee.htm">Login Page</a></li>
+                                </ul>
+                            </div>
+                        </section>
+                    </div>
+                </div>
+            </div>
+            <div id="main-menu-top">
+                <div class="inner">
+                    <a class="ubermenu-responsive-toggle ubermenu-responsive-toggle-main ubermenu-skin-none" data-ubermenu-target="ubermenu-main-2-primary-menu"><i class="fa fa-bars"></i>Menu</a><nav id="ubermenu-main-2-primary-menu" class="ubermenu ubermenu-main ubermenu-menu-2 ubermenu-loc-primary-menu ubermenu-responsive ubermenu-responsive-default ubermenu-responsive-collapse ubermenu-horizontal ubermenu-transition-shift ubermenu-trigger-hover ubermenu-skin-none ubermenu-bar-align-center ubermenu-items-align-center ubermenu-bound ubermenu-sub-indicators ubermenu-retractors-responsive ubermenu-notouch">
+                        <ul id="ubermenu-nav-main-2-primary-menu" class="ubermenu-nav">
+                            <li id="menu-item-5" class="ubermenu-item ubermenu-item-type-custom ubermenu-item-object-custom ubermenu-item-home ubermenu-item-5 ubermenu-item-level-0 ubermenu-column ubermenu-column-auto"><a class="ubermenu-target ubermenu-item-layout-default ubermenu-item-layout-text_only" href="~/" tabindex="0"><span class="ubermenu-target-title ubermenu-target-text">Home</span></a></li>
+                            <li id="menu-item-222" class="ubermenu-item ubermenu-item-type-post_type ubermenu-item-object-page @RenderSection("class_AboutUs", false) ubermenu-item-222 ubermenu-item-level-0 ubermenu-column ubermenu-column-auto"><a class="ubermenu-target ubermenu-item-layout-default ubermenu-item-layout-text_only" href="~/about-us" tabindex="0"><span class="ubermenu-target-title ubermenu-target-text">About Us</span></a></li>
+                            <li id="menu-item-241" class="ubermenu-item ubermenu-item-type-custom ubermenu-item-object-custom ubermenu-item-has-children ubermenu-item-241 ubermenu-item-level-0 ubermenu-column ubermenu-column-auto ubermenu-has-submenu-drop ubermenu-has-submenu-mega">
+                                <a class="ubermenu-target ubermenu-item-layout-default ubermenu-item-layout-text_only" href="#" tabindex="0"><span class="ubermenu-target-title ubermenu-target-text">Feature</span></a>
+                                <ul class="ubermenu-submenu ubermenu-submenu-id-241 ubermenu-submenu-type-mega ubermenu-submenu-drop ubermenu-submenu-align-left_edge_item ubermenu-autoclear"><li id="menu-item-242" class="ubermenu-item ubermenu-item-type-custom ubermenu-item-object-custom ubermenu-item-has-children ubermenu-item-242 ubermenu-item-auto ubermenu-item-header ubermenu-item-level-1 ubermenu-column ubermenu-column-auto ubermenu-has-submenu-stack"><a class="ubermenu-target ubermenu-item-layout-default ubermenu-item-layout-text_only" href="#"><span class="ubermenu-target-title ubermenu-target-text">PAGE SUPPORT</span></a><ul class="ubermenu-submenu ubermenu-submenu-id-242 ubermenu-submenu-type-stack ubermenu-autoclear"><li id="menu-item-42" class="ubermenu-item ubermenu-item-type-post_type ubermenu-item-object-page ubermenu-item-42 ubermenu-item-auto ubermenu-item-normal ubermenu-item-level-2 ubermenu-column ubermenu-column-auto"><a class="ubermenu-target ubermenu-item-layout-default ubermenu-item-layout-text_only" href="Single Post_CmsCoffee.htm"><span class="ubermenu-target-title ubermenu-target-text">Single Post</span></a></li><li id="menu-item-40" class="ubermenu-item ubermenu-item-type-post_type ubermenu-item-object-page ubermenu-item-40 ubermenu-item-auto ubermenu-item-normal ubermenu-item-level-2 ubermenu-column ubermenu-column-auto"><a class="ubermenu-target ubermenu-item-layout-default ubermenu-item-layout-text_only" href="Archive Page_CmsCoffee.htm"><span class="ubermenu-target-title ubermenu-target-text">Archive Page</span></a></li><li id="menu-item-41" class="ubermenu-item ubermenu-item-type-post_type ubermenu-item-object-page ubermenu-item-41 ubermenu-item-auto ubermenu-item-normal ubermenu-item-level-2 ubermenu-column ubermenu-column-auto"><a class="ubermenu-target ubermenu-item-layout-default ubermenu-item-layout-text_only" href="Login Page_CmsCoffee.htm"><span class="ubermenu-target-title ubermenu-target-text">Login Page</span></a></li><li id="menu-item-91" class="ubermenu-item ubermenu-item-type-post_type ubermenu-item-object-page ubermenu-item-91 ubermenu-item-auto ubermenu-item-normal ubermenu-item-level-2 ubermenu-column ubermenu-column-auto"><a class="ubermenu-target ubermenu-item-layout-default ubermenu-item-layout-text_only" href="Register_CmsCoffee.htm"><span class="ubermenu-target-title ubermenu-target-text">Register</span></a></li><li id="menu-item-39" class="ubermenu-item ubermenu-item-type-post_type ubermenu-item-object-page ubermenu-item-39 ubermenu-item-auto ubermenu-item-normal ubermenu-item-level-2 ubermenu-column ubermenu-column-auto"><a class="ubermenu-target ubermenu-item-layout-default ubermenu-item-layout-text_only" href="Gallery Page_CmsCoffee.htm"><span class="ubermenu-target-title ubermenu-target-text">Gallery Page</span></a></li><li id="menu-item-312" class="ubermenu-item ubermenu-item-type-custom ubermenu-item-object-custom ubermenu-item-312 ubermenu-item-auto ubermenu-item-normal ubermenu-item-level-2 ubermenu-column ubermenu-column-auto"><a class="ubermenu-target ubermenu-item-layout-default ubermenu-item-layout-text_only" href="Page not found_CmsCoffee.htm"><span class="ubermenu-target-title ubermenu-target-text">404</span></a></li></ul></li><li id="menu-item-27" class="ubermenu-item ubermenu-item-type-post_type ubermenu-item-object-page ubermenu-item-has-children ubermenu-item-27 ubermenu-item-auto ubermenu-item-header ubermenu-item-level-1 ubermenu-column ubermenu-column-auto ubermenu-has-submenu-stack"><a class="ubermenu-target ubermenu-item-layout-default ubermenu-item-layout-text_only" href="http://nesspresso.lotusapps.net/layout"><span class="ubermenu-target-title ubermenu-target-text">LAYOUT</span></a><ul class="ubermenu-submenu ubermenu-submenu-id-27 ubermenu-submenu-type-auto ubermenu-submenu-type-stack ubermenu-autoclear"><li id="menu-item-59" class="ubermenu-item ubermenu-item-type-post_type ubermenu-item-object-page ubermenu-item-59 ubermenu-item-auto ubermenu-item-normal ubermenu-item-level-2 ubermenu-column ubermenu-column-auto"><a class="ubermenu-target ubermenu-item-layout-default ubermenu-item-layout-text_only" href="Content – Right Sidebar_CmsCoffee.htm"><span class="ubermenu-target-title ubermenu-target-text">Content – Right Sidebar</span></a></li><li id="menu-item-58" class="ubermenu-item ubermenu-item-type-post_type ubermenu-item-object-page ubermenu-item-58 ubermenu-item-auto ubermenu-item-normal ubermenu-item-level-2 ubermenu-column ubermenu-column-auto"><a class="ubermenu-target ubermenu-item-layout-default ubermenu-item-layout-text_only" href="Left Sidebar – Content_CmsCoffee.htm"><span class="ubermenu-target-title ubermenu-target-text">Left Sidebar – Content</span></a></li><li id="menu-item-57" class="ubermenu-item ubermenu-item-type-post_type ubermenu-item-object-page ubermenu-item-57 ubermenu-item-auto ubermenu-item-normal ubermenu-item-level-2 ubermenu-column ubermenu-column-auto"><a class="ubermenu-target ubermenu-item-layout-default ubermenu-item-layout-text_only" href="Full Width_CmsCoffee.htm"><span class="ubermenu-target-title ubermenu-target-text">Full Width</span></a></li></ul></li><li id="menu-item-44" class="ubermenu-item ubermenu-item-type-custom ubermenu-item-object-custom ubermenu-item-has-children ubermenu-item-44 ubermenu-item-auto ubermenu-item-header ubermenu-item-level-1 ubermenu-column ubermenu-column-auto ubermenu-has-submenu-stack"><a class="ubermenu-target ubermenu-item-layout-default ubermenu-item-layout-text_only" href="#"><span class="ubermenu-target-title ubermenu-target-text">PORTFOLIO SUPPORT</span></a><ul class="ubermenu-submenu ubermenu-submenu-id-44 ubermenu-submenu-type-auto ubermenu-submenu-type-stack ubermenu-autoclear"><li id="menu-item-74" class="ubermenu-item ubermenu-item-type-post_type ubermenu-item-object-page ubermenu-item-74 ubermenu-item-auto ubermenu-item-normal ubermenu-item-level-2 ubermenu-column ubermenu-column-auto"><a class="ubermenu-target ubermenu-item-layout-default ubermenu-item-layout-text_only" href="Portfolio 1 Column_CmsCoffee.htm"><span class="ubermenu-target-title ubermenu-target-text">Portfolio 1 Column</span></a></li><li id="menu-item-73" class="ubermenu-item ubermenu-item-type-post_type ubermenu-item-object-page ubermenu-item-73 ubermenu-item-auto ubermenu-item-normal ubermenu-item-level-2 ubermenu-column ubermenu-column-auto"><a class="ubermenu-target ubermenu-item-layout-default ubermenu-item-layout-text_only" href="Portfolio 2 Column_CmsCoffee.htm"><span class="ubermenu-target-title ubermenu-target-text">Portfolio 2 Column</span></a></li><li id="menu-item-72" class="ubermenu-item ubermenu-item-type-post_type ubermenu-item-object-page ubermenu-item-72 ubermenu-item-auto ubermenu-item-normal ubermenu-item-level-2 ubermenu-column ubermenu-column-auto"><a class="ubermenu-target ubermenu-item-layout-default ubermenu-item-layout-text_only" href="Portfolio 3 Column_CmsCoffee.htm"><span class="ubermenu-target-title ubermenu-target-text">Portfolio 3 Column</span></a></li><li id="menu-item-71" class="ubermenu-item ubermenu-item-type-post_type ubermenu-item-object-page ubermenu-item-71 ubermenu-item-auto ubermenu-item-normal ubermenu-item-level-2 ubermenu-column ubermenu-column-auto"><a class="ubermenu-target ubermenu-item-layout-default ubermenu-item-layout-text_only" href="Portfolio 4 Column_CmsCoffee.htm"><span class="ubermenu-target-title ubermenu-target-text">Portfolio 4 Column</span></a></li></ul></li><li id="menu-item-243" class="ubermenu-item ubermenu-item-type-custom ubermenu-item-object-custom ubermenu-item-has-children ubermenu-item-243 ubermenu-item-auto ubermenu-item-header ubermenu-item-level-1 ubermenu-column ubermenu-column-auto ubermenu-has-submenu-stack"><a class="ubermenu-target ubermenu-item-layout-default ubermenu-item-layout-text_only" href="#"><span class="ubermenu-target-title ubermenu-target-text">BLOG SUPPORT</span></a><ul class="ubermenu-submenu ubermenu-submenu-id-243 ubermenu-submenu-type-auto ubermenu-submenu-type-stack ubermenu-autoclear"><li id="menu-item-62" class="ubermenu-item ubermenu-item-type-post_type ubermenu-item-object-page ubermenu-item-62 ubermenu-item-auto ubermenu-item-normal ubermenu-item-level-2 ubermenu-column ubermenu-column-auto"><a class="ubermenu-target ubermenu-item-layout-default ubermenu-item-layout-text_only" href="Blog – Right-sidebar_CmsCoffee.htm"><span class="ubermenu-target-title ubermenu-target-text">Blog – Right-sidebar</span></a></li><li id="menu-item-61" class="ubermenu-item ubermenu-item-type-post_type ubermenu-item-object-page ubermenu-item-61 ubermenu-item-auto ubermenu-item-normal ubermenu-item-level-2 ubermenu-column ubermenu-column-auto"><a class="ubermenu-target ubermenu-item-layout-default ubermenu-item-layout-text_only" href="Blog – 3 Column_CmsCoffee.htm"><span class="ubermenu-target-title ubermenu-target-text">Blog – 3 Column</span></a></li><li id="menu-item-60" class="ubermenu-item ubermenu-item-type-post_type ubermenu-item-object-page ubermenu-item-60 ubermenu-item-auto ubermenu-item-normal ubermenu-item-level-2 ubermenu-column ubermenu-column-auto"><a class="ubermenu-target ubermenu-item-layout-default ubermenu-item-layout-text_only" href="Blog – 4 Column_CmsCoffee.htm"><span class="ubermenu-target-title ubermenu-target-text">Blog – 4 Column</span></a></li></ul></li><li class="ubermenu-retractor ubermenu-retractor-mobile"><i class="fa fa-times"></i> Close</li></ul>
+                            </li>
+                            <li id="menu-item-252" class="ubermenu-item ubermenu-item-type-post_type ubermenu-item-object-page @RenderSection("class_AllMenu", false) ubermenu-item-has-children ubermenu-item-252 ubermenu-item-level-0 ubermenu-column ubermenu-column-auto ubermenu-has-submenu-drop ubermenu-has-submenu-mega">
+                                <a class="ubermenu-target ubermenu-item-layout-default ubermenu-item-layout-text_only" href="~/all-menu" tabindex="0"><span class="ubermenu-target-title ubermenu-target-text">All Menu</span></a>
+                                <ul class="ubermenu-submenu ubermenu-submenu-id-252 ubermenu-submenu-type-auto ubermenu-submenu-type-mega ubermenu-submenu-drop ubermenu-submenu-align-left_edge_item ubermenu-autoclear"><li id="menu-item-371" class="ubermenu-item ubermenu-item-type-post_type ubermenu-item-object-page ubermenu-item-371 ubermenu-item-auto ubermenu-item-header ubermenu-item-level-1 ubermenu-column ubermenu-column-auto"><a class="ubermenu-target ubermenu-item-layout-default ubermenu-item-layout-text_only" href="Cake Category_CmsCoffee.htm"><span class="ubermenu-target-title ubermenu-target-text">Cake Category</span></a></li><li id="menu-item-372" class="ubermenu-item ubermenu-item-type-post_type ubermenu-item-object-page ubermenu-item-372 ubermenu-item-auto ubermenu-item-header ubermenu-item-level-1 ubermenu-column ubermenu-column-auto"><a class="ubermenu-target ubermenu-item-layout-default ubermenu-item-layout-text_only" href="Tea Category_CmsCoffee.htm"><span class="ubermenu-target-title ubermenu-target-text">Tea Category</span></a></li><li id="menu-item-373" class="ubermenu-item ubermenu-item-type-post_type ubermenu-item-object-page ubermenu-item-373 ubermenu-item-auto ubermenu-item-header ubermenu-item-level-1 ubermenu-column ubermenu-column-auto"><a class="ubermenu-target ubermenu-item-layout-default ubermenu-item-layout-text_only" href="Beverages Category_CmsCoffee.htm"><span class="ubermenu-target-title ubermenu-target-text">Beverages Category</span></a></li><li id="menu-item-374" class="ubermenu-item ubermenu-item-type-post_type ubermenu-item-object-page ubermenu-item-374 ubermenu-item-auto ubermenu-item-header ubermenu-item-level-1 ubermenu-column ubermenu-column-auto"><a class="ubermenu-target ubermenu-item-layout-default ubermenu-item-layout-text_only" href="Cocktail Category_CmsCoffee.htm"><span class="ubermenu-target-title ubermenu-target-text">Cocktail Category</span></a></li><li id="menu-item-375" class="ubermenu-item ubermenu-item-type-post_type ubermenu-item-object-page ubermenu-item-375 ubermenu-item-auto ubermenu-item-header ubermenu-item-level-1 ubermenu-column ubermenu-column-auto"><a class="ubermenu-target ubermenu-item-layout-default ubermenu-item-layout-text_only" href="Milk Category_CmsCoffee.htm"><span class="ubermenu-target-title ubermenu-target-text">Milk Category</span></a></li><li id="menu-item-376" class="ubermenu-item ubermenu-item-type-post_type ubermenu-item-object-page ubermenu-item-376 ubermenu-item-auto ubermenu-item-header ubermenu-item-level-1 ubermenu-column ubermenu-column-auto"><a class="ubermenu-target ubermenu-item-layout-default ubermenu-item-layout-text_only" href="Coffee Category_CmsCoffee.htm"><span class="ubermenu-target-title ubermenu-target-text">Coffee Category</span></a></li><li class="ubermenu-retractor ubermenu-retractor-mobile"><i class="fa fa-times"></i> Close</li></ul>
+                            </li>
+                            <li id="menu-item-251" class="ubermenu-item ubermenu-item-type-post_type ubermenu-item-object-page ubermenu-item-251 ubermenu-item-level-0 ubermenu-column ubermenu-column-auto"><a class="ubermenu-target ubermenu-item-layout-default ubermenu-item-layout-text_only" href="Gallery_CmsCoffee.htm" tabindex="0"><span class="ubermenu-target-title ubermenu-target-text">Gallery</span></a></li>
+                            <li id="menu-item-250" class="ubermenu-item ubermenu-item-type-post_type ubermenu-item-object-page ubermenu-item-250 ubermenu-item-level-0 ubermenu-column ubermenu-column-auto"><a class="ubermenu-target ubermenu-item-layout-default ubermenu-item-layout-text_only" href="News & Events_CmsCoffee.htm" tabindex="0"><span class="ubermenu-target-title ubermenu-target-text">News &amp; Events</span></a></li>
+                            <li id="menu-item-23" class="ubermenu-item ubermenu-item-type-post_type ubermenu-item-object-page ubermenu-item-23 ubermenu-item-level-0 ubermenu-column ubermenu-column-auto"><a class="ubermenu-target ubermenu-item-layout-default ubermenu-item-layout-text_only" href="Typography_CmsCoffee.htm" tabindex="0"><span class="ubermenu-target-title ubermenu-target-text">Typography</span></a></li>
+                            <li id="menu-item-22" class="ubermenu-item ubermenu-item-type-post_type ubermenu-item-object-page ubermenu-item-22 ubermenu-item-level-0 ubermenu-column ubermenu-column-auto"><a class="ubermenu-target ubermenu-item-layout-default ubermenu-item-layout-text_only" href="~/contact-us" tabindex="0"><span class="ubermenu-target-title ubermenu-target-text">Contact Us</span></a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </header>
+
+
+
+        <div id="banner">
+            <img src="~/images/banner.png" alt="image banner" id="banner-image">
+            <h1>@RenderSection("banner_h1_title", false)</h1>
+        </div>
+        <div id="page" @RenderSection("class_id_page", false)>
+            @RenderBody()
+        </div>
+        <div>
+            @RenderSection("section_map", false)
+        </div>
+
+        <footer id="footer">
+            <div id="footer_shadow"></div>
+            <div class="inner">
+                <div class="one_fourth">
+                    <section id="text-3" class="widget widget_text">
+                        <h3 class="widgettitle">About Us</h3>			<div class="textwidget">
+                            <p>Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. </p>
+                            <p class="mail">hello@cmsideas.net</p>
+                            <p class="phone">+(84)123456789</p>
+                            <p class="address">198 West 21th Street, Suite 721 New York NY 10010</p>
+                        </div>
+                    </section>
+                </div>
+                <div class="one_fourth">
+                    <section id="text-4" class="widget widget_text">
+                        <h3 class="widgettitle">For Business</h3>			<div class="textwidget">
+                            <ul>
+                                <li><a href="#">Office Coffee</a></li>
+                                <li><a href="#">Food Service</a></li>
+                                <li><a href="#">Affiliate Program</a></li>
+                            </ul>
+                        </div>
+                    </section>
+                </div>
+                <div class="one_fourth">
+                    <section id="newsletterwidget-2" class="widget widget_newsletterwidget">
+                        <h3 class="widgettitle">Newsletter</h3>If you world like sign-up to the origin newsletter,please enter your email address below
+
+                        @*<script type="text/javascript">
+                            //<![CDATA[
+                            if (typeof newsletter_check !== "function") {
+                            window.newsletter_check = function (f) {
+                                var re = /^([a-zA-Z0-9_\.\-\+])+\@(([a-zA-Z0-9\-]{1,})+\.)+([a-zA-Z0-9]{2,})+$/;
+                                if (!re.test(f.elements["ne"].value)) {
+                                    alert("The email is not correct");
+                                    return false;
+                                }
+                                if (f.elements["ny"] && !f.elements["ny"].checked) {
+                                    alert("You must accept the privacy statement");
+                                    return false;
+                                }
+                                return true;
+                            }
+                            }
+                            //]]>
+                                                    </script>*@
+
+                        <div class="newsletter newsletter-widget">
+
+                            @*<script type="text/javascript">
+                                //<![CDATA[
+                                if (typeof newsletter_check !== "function") {
+                                window.newsletter_check = function (f) {
+                                    var re = /^([a-zA-Z0-9_\.\-\+])+\@(([a-zA-Z0-9\-]{1,})+\.)+([a-zA-Z0-9]{2,})+$/;
+                                    if (!re.test(f.elements["ne"].value)) {
+                                        alert("The email is not correct");
+                                        return false;
+                                    }
+                                    if (f.elements["ny"] && !f.elements["ny"].checked) {
+                                        alert("You must accept the privacy statement");
+                                        return false;
+                                    }
+                                    return true;
+                                }
+                                }
+                                //]]>
+                                                            </script>*@
+
+                            <form action="http://nesspresso.lotusapps.net/wp-content/plugins/newsletter/do/subscribe.php" onSubmit="return newsletter_check(this)" method="post"><input type="hidden" name="nr" value="widget" /><p><input class="newsletter-email" type="email" required name="ne" value="Email" onClick="if (this.defaultValue==this.value) this.value=''" onBlur="if (this.value=='') this.value=this.defaultValue" /></p><p><input class="newsletter-submit" type="submit" value="Subscribe" /></p></form>
+                        </div>
+                    </section>
+                </div>
+                <div class="one_fourth last">
+                    <section id="text-5" class="widget widget_text">
+                        <h3 class="widgettitle">Follow Us</h3>			<div class="textwidget">
+                            <p>Follow Origin on the following social network sites.</p>
+                            <ul class="social">
+                                <li class="icon facebook">
+                                    <a href="http://facebook.com.vn">facebook</a>
+                                </li>
+                                <li class="icon twitter">
+                                    <a href="http://facebook.com.vn">twitter</a>
+                                </li>
+                                <li class="icon google_plus">
+                                    <a href="http://facebook.com.vn">google</a>
+                                </li>
+                                <li class="icon feed">
+                                    <a href="http://facebook.com.vn">feed</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </section>
+                </div>
+                <div class="clearboth"></div>
+            </div>
+            <div id="footer_bottom">
+                <div class="inner">
+                    <div id="copyright">Copyright © 2017 <a href="~/">CMS Coffee</a> All Rights Reserved</div>
+                    <div class="clearboth"></div>
+                </div>
+            </div>
+            <script type="text/javascript" src="~/js/viewportchecker.js"></script>
+            <script type="text/javascript">
+                jQuery(document).ready(function () {
+                    jQuery('#background-about').addClass("hidden").viewportChecker({
+                        classToAdd: 'visible animated fadeInRight', // Class to add to the elements when they are visible
+                        offset: 100
+                    });
+                    // effect for latest blog
+                    jQuery('#latest-update .thumbnail img').addClass("hidden").viewportChecker({
+                        classToAdd: 'visible animated zoomInDown', // Class to add to the elements when they are visible
+                        offset: 100
+                    });
+                    // effect for video
+                    jQuery('.image_info_recipe img').addClass("hidden").viewportChecker({
+                        classToAdd: 'visible animated flipInX', // Class to add to the elements when they are visible
+                        offset: 100
+                    });
+                    jQuery('.video_recipe img').addClass("hidden").viewportChecker({
+                        classToAdd: 'visible animated fadeIn', // Class to add to the elements when they are visible
+                        offset: 100
+                    });
+                    // effect bottom
+                    jQuery('#content_bottom img').addClass("hidden").viewportChecker({
+                        classToAdd: 'visible animated fadeInLeft', // Class to add to the elements when they are visible
+                        offset: 100
+                    });
+                    // about
+                    jQuery('#block_about_2 img').addClass("hidden").viewportChecker({
+                        classToAdd: 'visible animated fadeInLeft', // Class to add to the elements when they are visible
+                        offset: 100
+                    });
+                    jQuery('#block_about_5 img').addClass("hidden").viewportChecker({
+                        classToAdd: 'visible animated fadeInLeft', // Class to add to the elements when they are visible
+                        offset: 100
+                    });
+                    jQuery('#block_about_3 img').addClass("hidden").viewportChecker({
+                        classToAdd: 'visible animated fadeInRight', // Class to add to the elements when they are visible
+                        offset: 100
+                    });
+                    jQuery('#block_about_1 img').addClass("hidden").viewportChecker({
+                        classToAdd: 'visible animated fadeInRight', // Class to add to the elements when they are visible
+                        offset: 100
+                    });
+                    // for blog
+                    jQuery('.image_shadow_wrap img').addClass("hidden").viewportChecker({
+                        classToAdd: 'visible animated bounceIn', // Class to add to the elements when they are visible
+                        offset: 100
+                    });
+                    // gallery
+                    jQuery('#page .gallery-row img').addClass("hidden").viewportChecker({
+                        classToAdd: 'visible animated bounceIn', // Class to add to the elements when they are visible
+                        offset: 100
+                    });
+                    // menu
+                    jQuery('.menu_category_desc img').addClass("hidden").viewportChecker({
+                        classToAdd: 'visible animated bounceIn', // Class to add to the elements when they are visible
+                        offset: 100
+                    });
+                    jQuery('.menu_item_info img').addClass("hidden").viewportChecker({
+                        classToAdd: 'visible animated fadeIn', // Class to add to the elements when they are visible
+                        offset: 100
+                    });
+                });
+            </script>
+        </footer>
+
+        <script type="text/javascript" src="~/js/bootstrap-tooltip.js"></script>
+        <script type="text/javascript" src="~/js/wprmm.js"></script>
+        <script type="text/javascript" src="~/js/comment-reply.js"></script>
+        <script type="text/javascript" src='//maps.googleapis.com/maps/api/js?sensor=false&#038;ver=4.0.20'></script>
+        <script type="text/javascript">
+                /* <![CDATA[ */
+                var ubermenu_data =
+                    { "remove_conflicts": "on", "reposition_on_load": "off", "intent_delay": "300", "intent_interval": "100", "intent_threshold": "7", "responsive_breakpoint": "0", "accessible": "on", "retractor_display_strategy": "responsive" };
+/*
+ ]]> */
+        </script>
+        <script type="text/javascript" src="~/js/ubermenu.js"></script>
+        <script type="text/javascript">
+                if (typeof jQuery != 'undefined') {
+                    if (jQuery.browser.msie && parseInt(jQuery.browser.version, 10) == 8) {
+                        jQuery(".jqueryslidemenu ul li ul").css({ display: 'block', visibility: 'hidden' });
+                    }
+                }
+        </script>
+    </div>
+
+
+
+
+
+    <div class="ui-dialog ui-widget ui-widget-content ui-corner-all ui-front" style="position: relative; top: -2199.8px; left: 697.5px; display: none;" tabindex="-1" role="dialog" aria-describedby="ajax-login-register-dialog" aria-labelledby="ui-id-1">
+        <div class="ui-dialog-titlebar ui-widget-header ui-corner-all ui-helper-clearfix"><span id="ui-id-1" class="ui-dialog-title">Register</span><button type="button" class="ui-button ui-widget ui-state-default ui-corner-all ui-button-icon-only ui-dialog-titlebar-close" role="button" aria-disabled="false" title="Close"><span class="ui-button-icon-primary ui-icon ui-icon-closethick"></span><span class="ui-button-text">Close</span></button></div><div id="ajax-login-register-dialog" class="ajax-login-register-container ui-dialog-content ui-widget-content" data-security="8435765ca8" style="">
+            <div id="ajax-login-register-target" class="ajax-login-register-dialog">Loading...</div>
+        </div>
+    </div><div class="ui-dialog ui-widget ui-widget-content ui-corner-all ui-front" style="position: relative; top: -2199.8px; left: 706px; display: none;" tabindex="-1" role="dialog" aria-describedby="ajax-login-register-login-dialog" aria-labelledby="ui-id-2">
+        <div class="ui-dialog-titlebar ui-widget-header ui-corner-all ui-helper-clearfix"><span id="ui-id-2" class="ui-dialog-title">Login</span><button type="button" class="ui-button ui-widget ui-state-default ui-corner-all ui-button-icon-only ui-dialog-titlebar-close" role="button" aria-disabled="false" title="Close"><span class="ui-button-icon-primary ui-icon ui-icon-closethick"></span><span class="ui-button-text">Close</span></button></div><div id="ajax-login-register-login-dialog" class="ajax-login-register-container ui-dialog-content ui-widget-content" data-security="1214a5e6e3" style="">
+            <div id="ajax-login-register-login-target" class="ajax-login-register-login-dialog">Loading...</div>
+        </div>
+    </div>
+</body>
+</html>
+<!-- Dynamic page generated in 0.667 seconds. -->
+<!-- Cached page generated by WP-Super-Cache on 2017-11-10 10:11:05 -->
+<!-- super cache -->

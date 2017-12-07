@@ -1,0 +1,71 @@
+﻿@inherits Umbraco.Web.Mvc.UmbracoTemplatePage
+@{
+    Layout = "MasterPages.cshtml";
+}
+
+@* the fun starts here *@
+
+@section Title
+{
+    Contact us | CmsCoffee
+}
+@section class_body
+{
+    page page-id-244 page-parent page-template-default responsive no-shadow no-gradient
+}
+@section banner_h1_title
+{
+    Contact Us
+}
+@section section_map
+{
+    <section id="text-2" class="widget widget_text">
+        <div class="textwidget"><img src="~/images/maps1.jpg" alt="image contact map" class="" width="100%"></div>
+    </section>
+}
+
+
+<div class="inner right_sidebar">
+    <div id="main">
+        <div class="post-20 page type-page status-publish hentry content">
+            <script type="text/javascript" src="~/js/jquery_013.js"></script>
+            <h3 class="contact-title">Contacts Forms</h3>
+            <p>
+                The film is an initiative taken on by professional snowboarder
+                Marie-France Roy and directed by Filmmaker Darcy Turenne in which all
+                the riders are bringing to life the importance of protecting and living
+                in balance with our environment.
+            </p>
+            <div class="contact_form_wrap">
+                <div class="success" style="display:none;"><div class="message_box_content">thank you for message !</div></div>
+                <form class="contact_form" action="/contact-us" method="post" novalidate="novalidate">
+                    <div class="row-input">
+                        <p>
+                            <input required="required" id="contact_602_name" name="contact_602_name" class="text_input" value="Name *" tabindex="5" type="text">
+                        </p>
+                        <p style="float:right;">
+                            <input required="required" id="contact_602_email" name="contact_602_email" class="text_input" value="Email *" tabindex="6" type="email">
+                        </p>
+                    </div>
+                    <p><textarea required="required" name="contact_602_content" class="textarea" cols="30" rows="5" tabindex="7"></textarea></p>
+                    <p><button type="submit" class="button white"><span>Send Message</span></button></p>
+                    <input value="1" name="theme_contact_form_submit" type="hidden">
+                    <input value="602" name="contact_widget_id" type="hidden">
+                    <input value="team*cmsideas.net" name="contact_602_to" type="hidden">
+                </form>
+            </div>
+            <div class="clearboth"></div>
+        </div>			<div class="clearboth"></div>
+    </div>
+    <aside id="sidebar">
+        <div id="sidebar_content" class="lessgap">
+            <section id="contact_info-2" class="widget widget_contact_info" style="margin-bottom: 20px;">
+                <h3 class="widgettitle">Contacts Info</h3>			<div class="contact_info_wrap">
+                    <p>Cleatskins are revolutionary footwear accessory designed to allow athletes to move swiftly.</p>
+                    <p><span class="icon_text icon_phone default">+800 - 568 - 8989</span></p>									<p><a href="mailto:noreply@gmail.com" class="icon_text icon_email default">noreply@gmail.com</a></p>						<p><span class="icon_text icon_home default">96 Isabella ST, London, SE 1 8DD</span></p>
+                </div>
+            </section>
+        </div>
+    </aside>
+    <div class="clearboth"></div>
+</div>
